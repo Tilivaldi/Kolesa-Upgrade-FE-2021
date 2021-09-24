@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <link rel="stylesheet" href="./src/css/style.css">
@@ -8,16 +9,14 @@
     <link rel="stylesheet" href="./src/css/reset.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="app"></div>
     <div class="card-list">
         <div class="card">
             <div class="image">
-                <img src="./src/assets/images/product-image.png"
-                width="330"
-                height="330"
-                alt="Футболка Эволюционируй">
+                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
                 <span class="badge">new</span>
             </div>
             <div class="description">
@@ -30,9 +29,7 @@
                 <div class="hint">
                     Размеры S/M/L
                 </div>
-                <button
-                class="button"
-                type="submit">
+                <button class="button" type="submit" id="myBtn2">
                     Заказать
                 </button>
             </div>
@@ -40,10 +37,7 @@
 
         <div class="card">
             <div class="image">
-                <img src="./src/assets/images/product-image.png"
-                width="330"
-                height="330"
-                alt="Футболка Эволюционируй">
+                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
                 <span class="badge">new</span>
             </div>
             <div class="description">
@@ -56,14 +50,176 @@
                 <div class="hint">
                     Размеры S/M/L
                 </div>
-                <button
-                class="button"
-                type="submit">
+                <button class="button" type="submit" id="myBtn">
                     Заказать
                 </button>
             </div>
         </div>
 
+        <!--Модальное окно-->
+        <div id="myModal" class="modal">
+
+            <!-- Модальное содержание -->
+            <div class="modal-content">
+                <div class="image-container">
+                    <div class="active-image">
+                        <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Вид спереди">
+                    </div>
+
+                    <div class="gallery-images">
+                        <img src="./src/assets/images/image-boy.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image">
+
+                        <img src="./src/assets/images/product-image.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image active">
+
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+
+                    </div>
+                </div>
+
+                <div class="product-description">
+                    <h4 class="inner-title">Футболка "Эволюционируй или сдохни"</h4>
+                    <div class="amount-container">
+                        <div class="price-container">
+                            <h3 class="price-product">100 баллов</h3>
+                            <button class="button request" type="submit" id="myBtn">
+                                Попросить 50 баллов
+                            </button>
+                        </div>
+                        <div class="amount-user">
+                            <p class="amount-title">Твой баланс:</p>
+                            <span class="amount-check">50 баллов</span>
+                        </div>
+                    </div>
+
+                    <div class="colors">
+                        <p class="color-description">Цвета:</p>
+                        <div class="radio-buttons">
+                            <div class="form_radio_btn colors">
+                                <input id="radio-1" type="radio" name="color" value="1" checked>
+                                <label for="radio-1">Синий</label>
+                            </div>
+
+                            <div class="form_radio_btn colors">
+                                <input id="radio-2" type="radio" name="color" value="2">
+                                <label for="radio-2">Бежевый</label>
+                            </div>
+
+                            <div class="form_radio_btn colors">
+                                <input id="radio-3" type="radio" name="color" value="3">
+                                <label for="radio-3">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn colors">
+                                <input id="radio-4" type="radio" name="color" value="4">
+                                <label for="radio-4">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn colors">
+                                <input id="radio-5" type="radio" name="color" value="5">
+                                <label for="radio-5">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn colors">
+                                <input id="radio-6" type="radio" name="color" value="6">
+                                <label for="radio-6">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn colors">
+                                <input id="radio-7" type="radio" name="color" value="7">
+                                <label for="radio-7">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn colors">
+                                <input id="radio-8" type="radio" name="color" value="8">
+                                <label for="radio-8">Серый</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="size">
+                        <p class="size-description">Размер:</p>
+                        <div class="radio-buttons">
+                            <div class="form_radio_btn">
+                                <input id="size-radio-1" type="radio" name="size" value="S">
+                                <label for="size-radio-1">S</label>
+                            </div>
+
+                            <div class="form_radio_btn">
+                                <input id="size-radio-2" type="radio" name="size" value="M" checked>
+                                <label for="size-radio-2">M</label>
+                            </div>
+
+                            <div class="form_radio_btn">
+                                <input id="size-radio-3" type="radio" name="size" value="L">
+                                <label for="size-radio-3">L</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="content-title">
+                            Детали:
+                        </div>
+                        <div class="content-description">
+                            Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
+                        </div>
+
+                        <div class="content-title">
+                            Как выбрать размер:
+                        </div>
+                        <div class="content-description">
+                            Написать дяде Рику для уточнения.
+                        </div>
+                    </div>
+                </div>
+                <span class="close">x</span>
+            </div>
+
+        </div>
+        <!--Модальное окно-->
+
+
+
     </div>
-  </body>
+
+    <script>
+        // Получить модальный
+        var modal = document.getElementById("myModal");
+        // Получить кнопку, которая открывает модальный
+        var btn = document.getElementById("myBtn");
+        // Получить элемент <span>, который закрывает модальный
+        var span = document.getElementsByClassName("close")[0];
+        // Когда пользователь нажимает на кнопку, откройте модальный
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        // Когда пользователь нажимает на <span> (x), закройте модальное окно
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        // Когда пользователь щелкает в любом месте за пределами модального, закройте его
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
 </html>
