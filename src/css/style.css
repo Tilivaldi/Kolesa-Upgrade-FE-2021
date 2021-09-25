@@ -114,6 +114,10 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.other-page {
+    display: block;
+}
+
 /* Модальное содержание/коробка */
 .modal-content {
     background-color: #fff;
@@ -258,19 +262,13 @@ Radio button ***/
 .form_radio_btn label {
     display: inline-block;
     cursor: pointer;
-    padding: 0 15px;
+    padding: 0 10px 0 35px;
     line-height: 34px;
     border: 1px solid #999;
     border-radius: 6px;
     user-select: none;
 }
 
-/* Checked */
-.form_radio_btn input[type=radio]:checked + label {
-    background: #d6ecfb;
-}
-
-/* Hover */
 .form_radio_btn label:hover {
     color: #666;
 }
@@ -279,6 +277,54 @@ Radio button ***/
 .form_radio_btn input[type=radio]:disabled + label {
     background: #efefef;
     color: #666;
+}
+
+input[type='radio']:checked + label {
+    background: #d6ecfb;
+    border: none;
+}
+
+input[type='radio']:not(:checked) + label {
+    border: none;
+}
+
+input[type='radio']:checked + label,
+input[type='radio']:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    content: '';
+    left: 0;
+    top: 0;
+}
+
+input[type='radio']:checked + label::after,
+input[type='radio']:not(:checked) + label::after {
+    content: '';
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    left: 5px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background-color: #00458a;
+}
+
+input.blue[type='radio']:checked + label::after,
+input.blue[type='radio']:not(:checked) + label::after + .blue {
+    background-color: #00458a;
+}
+
+input[type='radio']:not(:checked) + label::after {
+    opacity: 0;
+}
+
+input[type='radio']:checked + label::after {
+    opacity: 1;
 }
 
 .blue {
