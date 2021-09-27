@@ -282,17 +282,16 @@ Radio button ***/
     color: #666;
 }
 
-input[type='radio']:checked + label {
+.merch-options input[type='radio']:checked + label {
     background: #d6ecfb;
+}
+
+.merch-options input[type='radio']:not(:checked) + label {
     border: none;
 }
 
-input[type='radio']:not(:checked) + label {
-    border: none;
-}
-
-input[type='radio']:checked + label,
-input[type='radio']:not(:checked) + label {
+.merch-options input[type='radio']:checked + label,
+.merch-options input[type='radio']:not(:checked) + label {
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -302,8 +301,8 @@ input[type='radio']:not(:checked) + label {
     border: 1px solid transparent;
 }
 
-input[type='radio']:checked + label::after,
-input[type='radio']:not(:checked) + label::after {
+.merch-options input[type='radio']:checked + label::after,
+.merch-options input[type='radio']:not(:checked) + label::after {
     content: '';
     position: absolute;
     -webkit-transition: all 0.2s ease;
@@ -317,62 +316,62 @@ input[type='radio']:not(:checked) + label::after {
     border-radius: 8px;
 }
 
-input.size[type='radio']:checked + label.size::after,
-input.size[type='radio']:not(:checked) + label.size::after {
+.merch-options input.size[type='radio']:checked + label.size::after,
+.merch-options input.size[type='radio']:not(:checked) + label.size::after {
     width: 1px;
     height: 1px;
 }
 
-input.size[type='radio']:checked + label.size::after {
+.merch-options input.size[type='radio']:checked + label.size::after {
     background-color: #d6ecfb;
 }
 
-input.size[type='radio']:not(:checked) + label.size::after {
+.merch-options input.size[type='radio']:not(:checked) + label.size::after {
     background-color: #d6ecfb;
 }
 
-input.size[type='radio']:not(:checked) + label {
+.merch-options input.size[type='radio']:not(:checked) + label {
     border: 1px solid rgba(28, 24, 25, 0.1);
 }
 
-input.blue[type='radio']:checked + label.blue::after {
+.merch-options input.blue[type='radio']:checked + label.blue::after {
     background-color: #00458a;
 }
 
-input.blue[type='radio']:not(:checked) + label.blue::after {
+.merch-options input.blue[type='radio']:not(:checked) + label.blue::after {
     background-color: #00458a;
 }
 
-input.blue[type='radio']:not(:checked) + label {
+.merch-options input.blue[type='radio']:not(:checked) + label {
     border: 1px solid #00458a;
 }
 
-input.milk[type='radio']:checked + label.milk::after {
+.merch-options input.milk[type='radio']:checked + label.milk::after {
     background-color: #efe8d8;
 }
 
-input.milk[type='radio']:not(:checked) + label.milk::after {
+.merch-options input.milk[type='radio']:not(:checked) + label.milk::after {
     background-color: #efe8d8;
 }
 
-input.milk[type='radio']:not(:checked) + label {
+.merch-options input.milk[type='radio']:not(:checked) + label {
     border: 1px solid #efe8d8;
 }
 
-input.gray[type='radio']:checked + label.gray::after {
+.merch-options input.gray[type='radio']:checked + label.gray::after {
     background-color: #d4d4da;
 }
 
-input.gray[type='radio']:not(:checked) + label.gray::after {
+.merch-options input.gray[type='radio']:not(:checked) + label.gray::after {
     background-color: #d4d4da;
     border: 1px solid #d4d4da;
 }
 
-input.gray[type='radio']:not(:checked) + label {
+.merch-options input.gray[type='radio']:not(:checked) + label {
     border: 1px solid #d4d4da;
 }
 
-label.size {
+.merch-options label.size {
     width: 40px;
     height: 40px;
     text-align: center;
