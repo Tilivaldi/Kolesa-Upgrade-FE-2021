@@ -11,6 +11,15 @@
     box-sizing: border-box;
 }
 
+body {
+    @font-face {
+        font-family: 'Open Sans';
+        src:
+            local('HelveticaNeue-Bold'),
+            url('../fonts/OpenSans-Regular.ttf');
+    }
+}
+
 .card-list {
     display: flex;
 }
