@@ -46,7 +46,8 @@ Header
 .user-basket a {
     display: flex;
     gap: 16px;
-    flex-wrap: wrap;
+    flex-flow: wrap;
+    max-width: 200px;
 }
 
 .user-photo {
@@ -263,6 +264,11 @@ footer {
     margin: 11px 0 0 0;
 }
 
+.social-icons li img:hover {
+    width: 110%;
+    height: 110%;
+}
+
 .right-widget {
     display: flex;
     flex-basis: 416px;
@@ -287,6 +293,11 @@ footer {
     color: #2a81dd;
     max-width: 150px;
     min-width: 150px;
+}
+
+.footer-button:hover {
+    text-decoration: underline;
+    transition: all 0.5s ease-out;
 }
 
 /****
@@ -529,6 +540,11 @@ Radio button ***/
 .form_radio_btn {
     display: inline-block;
     margin-right: 10px;
+}
+
+.form_radio_btn:hover {
+    background: #d6ecfb;
+    border-radius: 8px;
 }
 
 .form_radio_btn input[type=radio] {
