@@ -4,204 +4,419 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
-    <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/normalize.css">
     <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <title>Vite App</title>
+    <title>Home page</title>
 </head>
 
 <body>
-    <div id="app"></div>
-    <div class="card-list">
-        <div class="card">
-            <div class="merch-image">
-                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
-                <span class="merch-badge">new</span>
-            </div>
-            <div class="merch-description">
-                <div class="merch-price">
-                    220 баллов
+    <div id="app">
+        <div class="main">
+            <header class="header">
+                <div class="logo">
+                    <a href="#">
+                        <img src="src/assets/images/logo.svg" alt="Логотип колеса" width="215" height="35" />
+                    </a>
                 </div>
-                <h3 class="merch-title">
-                    Футболка "Эволюционируй или сдохни"
-                </h3>
-                <div class="merch-hint">
-                    Размеры S/M/L
-                </div>
-                <button class="merch-button" type="submit">
-                    Заказать
-                </button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="merch-image">
-                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
-                <span class="merch-badge">new</span>
-            </div>
-            <div class="merch-description">
-                <div class="merch-price">
-                    220 баллов
-                </div>
-                <h3 class="merch-title">
-                    Футболка "Эволюционируй или сдохни"
-                </h3>
-                <div class="merch-hint">
-                    Размеры S/M/L
-                </div>
-                <button class="merch-button" type="submit" id="myBtn">
-                    Заказать (модальное окнопше)
-                </button>
-            </div>
-        </div>
-
-        <!--Модальное окно-->
-        <div id="myModal" class="modal">
-
-            <!-- Модальное содержание -->
-            <div class="modal-content">
-                <div class="image-container">
-                    <div class="active-image">
-                        <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Вид спереди">
-                    </div>
-
-                    <div class="gallery-images">
-                        <img src="./src/assets/images/image-boy.png" width="50" height="50" alt="Вид спереди"
-                            class="gallery-thumb-image">
-
-                        <img src="./src/assets/images/product-image.png" width="50" height="50" alt="Вид спереди"
-                            class="gallery-thumb-image active">
-
-                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
-                            class="gallery-thumb-image ">
-                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
-                            class="gallery-thumb-image ">
-                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
-                            class="gallery-thumb-image ">
-                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
-                            class="gallery-thumb-image ">
-                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
-                            class="gallery-thumb-image ">
-                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
-                            class="gallery-thumb-image ">
-                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
-                            class="gallery-thumb-image ">
-
+                <!--
+                    Search
+                -->
+                <div class="header-search">
+                    <input type="text" class="form-control" placeholder="Search this blog">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
                     </div>
                 </div>
+                <!--
+                    Search
+                -->
+                <div class="user-basket">
+                    <a href="#">
+                        <img src="/src/assets/images/user-default.png" alt="Фото пользователя" width="44" height="44"
+                            class="user-photo">
+                        <div class="user-name">Мортиджан</div>
+                        <div class="user-balance">300 баллов</div>
+                    </a>
+                </div>
 
-                <div class="product-description">
-                    <h4 class="inner-title">Футболка "Эволюционируй или сдохни"</h4>
-                    <div class="amount-container">
-                        <div class="price-container">
-                            <h3 class="price-product">100 баллов</h3>
-                            <button class="merch-button request" type="submit" id="myBtn">
-                                Попросить 50 баллов
-                            </button>
-                        </div>
-                        <div class="amount-user">
-                            <p class="amount-title">Твой баланс:</p>
-                            <span class="amount-check">50 баллов</span>
-                        </div>
+            </header>
+
+            <section class="page">
+                <aside class="sidebar-menu">
+                    <nav class="menu">
+                        <ul>
+                            <a href="#">
+                                <li>Оргсхема</li>
+                            </a>
+                            <a href="#">
+                                <li>Kolesa Team</li>
+                            </a>
+                            <a href="#">
+                                <li class="menu-active">Kolesa Shop</li>
+                            </a>
+                            <a href="#">
+                                <li>Картина компании</li>
+                            </a>
+                            <a href="#">
+                                <li>Новости</li>
+                            </a>
+                            <a href="#">
+                                <li>Education</li>
+                            </a>
+                            <a href="#">
+                                <li>Guidelines</li>
+                            </a>
+                            <a href="#">
+                                <li>Библиотека</li>
+                            </a>
+                            <a href="#">
+                                <li>FAQ</li>
+                            </a>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="workspace">
+                    <div class="banner">
+                        <a href="#">
+                            <img src="/src/assets/images/banner.png" alt="Продающий баннер" width="1038" height="336">
+                        </a>
+                    </div>
+                    <div class="information-buttons">
+                        <button class="button info-button merch-plus" type="submit">
+                            Получить баллы
+                        </button>
+                        <button class="button info-button merch-question" type="submit">
+                            Как получить баллы
+                        </button>
+                        <button class="button info-button merch-gift" type="submit">
+                            Подарить баллы
+                        </button>
                     </div>
 
-                    <div class="colors">
-                        <p class="color-description">Цвета:</p>
+                    <div class="merch-type">
                         <div class="radio-buttons">
                             <div class="form_radio_btn merch-options">
-                                <input id="radio-1" type="radio" name="color" value="1" class="colors-button blue" checked>
-                                <label for="radio-1" class="blue">Синий</label>
+                                <input id="merch-type-1" type="radio" name="merch-type" value="All" class="merch-type-options">
+                                <label for="merch-type-1" class="merch-type-options">Все товары</label>
                             </div>
 
                             <div class="form_radio_btn merch-options">
-                                <input id="radio-2" type="radio" name="color" value="2" class="colors-button milk">
-                                <label for="radio-2" class="milk">Бежевый</label>
+                                <input id="merch-type-2" type="radio" name="merch-type" value="Одежда"  class="merch-type-options">
+                                <label for="merch-type-2" class="merch-type-options">Одежда</label>
                             </div>
 
                             <div class="form_radio_btn merch-options">
-                                <input id="radio-3" type="radio" name="color" value="3" class="colors-button gray">
-                                <label for="radio-3" class="gray">Серый</label>
-                            </div>
-
-                            <div class="form_radio_btn merch-options">
-                                <input id="radio-4" type="radio" name="color" value="4" class="colors-button gray">
-                                <label for="radio-4" class="gray">Серый</label>
-                            </div>
-
-                            <div class="form_radio_btn merch-options">
-                                <input id="radio-5" type="radio" name="color" value="5" class="colors-button gray">
-                                <label for="radio-5" class="gray">Серый</label>
-                            </div>
-
-                            <div class="form_radio_btn merch-options">
-                                <input id="radio-6" type="radio" name="color" value="6" class="colors-button gray">
-                                <label for="radio-6" class="gray">Серый</label>
-                            </div>
-
-                            <div class="form_radio_btn merch-options">
-                                <input id="radio-7" type="radio" name="color" value="7" class="colors-button gray">
-                                <label for="radio-7" class="gray">Серый</label>
-                            </div>
-
-                            <div class="form_radio_btn merch-options">
-                                <input id="radio-8" type="radio" name="color" value="8" class="colors-button gray">
-                                <label for="radio-8" class="gray">Серый</label>
+                                <input id="merch-type-3" type="radio" name="merch-type" value="Акссесуары" checked class="merch-type-options">
+                                <label for="merch-type-3" class="merch-type-options">Акссесуары</label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="size">
-                        <p class="size-description">Размер:</p>
-                        <div class="radio-buttons">
-                            <div class="form_radio_btn merch-options">
-                                <input id="size-radio-1" type="radio" name="size" value="S" class="size">
-                                <label for="size-radio-1" class="size">S</label>
+                    <div class="card-list">
+                        <div class="card">
+                            <div class="merch-image">
+                                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                                <span class="merch-badge">new</span>
                             </div>
-
-                            <div class="form_radio_btn merch-options">
-                                <input id="size-radio-2" type="radio" name="size" value="M" checked class="size">
-                                <label for="size-radio-2" class="size">M</label>
-                            </div>
-
-                            <div class="form_radio_btn merch-options">
-                                <input id="size-radio-3" type="radio" name="size" value="L" class="size">
-                                <label for="size-radio-3" class="size">L</label>
+                            <div class="merch-description">
+                                <div class="merch-price">
+                                    220 баллов
+                                </div>
+                                <h3 class="merch-title">
+                                    Футболка "Эволюционируй или сдохни"
+                                </h3>
+                                <div class="merch-hint">
+                                    Размеры S/M/L
+                                </div>
+                                <button class="button merch-button" type="submit">
+                                    Заказать
+                                </button>
                             </div>
                         </div>
+
+                        <div class="card">
+                            <div class="merch-image">
+                                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                                <span class="merch-badge">new</span>
+                            </div>
+                            <div class="merch-description">
+                                <div class="merch-price">
+                                    220 баллов
+                                </div>
+                                <h3 class="merch-title">
+                                    Футболка "Эволюционируй или сдохни"
+                                </h3>
+                                <div class="merch-hint">
+                                    Размеры S/M/L
+                                </div>
+                                <button class="button merch-button" type="submit" id="myBtn">
+                                    Заказать (модальное окнопше)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="merch-image">
+                                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                                <span class="merch-badge">new</span>
+                            </div>
+                            <div class="merch-description">
+                                <div class="merch-price">
+                                    220 баллов
+                                </div>
+                                <h3 class="merch-title">
+                                    Футболка "Эволюционируй или сдохни"
+                                </h3>
+                                <div class="merch-hint">
+                                    Размеры S/M/L
+                                </div>
+                                <button class="button merch-button" type="submit">
+                                    Заказать (модальное окнопше)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="merch-image">
+                                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                                <span class="merch-badge">new</span>
+                            </div>
+                            <div class="merch-description">
+                                <div class="merch-price">
+                                    220 баллов
+                                </div>
+                                <h3 class="merch-title">
+                                    Футболка "Эволюционируй или сдохни"
+                                </h3>
+                                <div class="merch-hint">
+                                    Размеры S/M/L
+                                </div>
+                                <button class="button merch-button" type="submit">
+                                    Заказать (модальное окнопше)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="merch-image">
+                                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                                <span class="merch-badge">new</span>
+                            </div>
+                            <div class="merch-description">
+                                <div class="merch-price">
+                                    220 баллов
+                                </div>
+                                <h3 class="merch-title">
+                                    Футболка "Эволюционируй или сдохни"
+                                </h3>
+                                <div class="merch-hint">
+                                    Размеры S/M/L
+                                </div>
+                                <button class="button merch-button" type="submit">
+                                    Заказать (модальное окнопше)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="merch-image">
+                                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                                <span class="merch-badge">new</span>
+                            </div>
+                            <div class="merch-description">
+                                <div class="merch-price">
+                                    220 баллов
+                                </div>
+                                <h3 class="merch-title">
+                                    Футболка "Эволюционируй или сдохни"
+                                </h3>
+                                <div class="merch-hint">
+                                    Размеры S/M/L
+                                </div>
+                                <button class="button merch-button" type="submit">
+                                    Заказать (модальное окнопше)
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                        <!--Модальное окно-->
+                        <div id="myModal" class="modal">
+
+                            <!-- Модальное содержание -->
+                            <div class="modal-content">
+                                <div class="image-container">
+                                    <div class="active-image">
+                                        <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Вид спереди">
+                                    </div>
+
+                                    <div class="gallery-images">
+                                        <img src="./src/assets/images/image-boy.png" width="50" height="50" alt="Вид спереди"
+                                            class="gallery-thumb-image">
+
+                                        <img src="./src/assets/images/product-image.png" width="50" height="50" alt="Вид спереди"
+                                            class="gallery-thumb-image active">
+
+                                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                                            class="gallery-thumb-image ">
+                                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                                            class="gallery-thumb-image ">
+                                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                                            class="gallery-thumb-image ">
+                                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                                            class="gallery-thumb-image ">
+                                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                                            class="gallery-thumb-image ">
+                                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                                            class="gallery-thumb-image ">
+                                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                                            class="gallery-thumb-image ">
+
+                                    </div>
+                                </div>
+
+                                <div class="product-description">
+                                    <h4 class="inner-title">Футболка "Эволюционируй или сдохни"</h4>
+                                    <div class="amount-container">
+                                        <div class="price-container">
+                                            <h3 class="price-product">100 баллов</h3>
+                                            <button class="button merch-button request" type="submit" id="myBtn">
+                                                Попросить 50 баллов
+                                            </button>
+                                        </div>
+                                        <div class="amount-user">
+                                            <p class="amount-title">Твой баланс:</p>
+                                            <span class="amount-check">50 баллов</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="colors">
+                                        <p class="color-description">Цвета:</p>
+                                        <div class="radio-buttons">
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="radio-1" type="radio" name="color" value="1" class="colors-button blue" checked>
+                                                <label for="radio-1" class="blue">Синий</label>
+                                            </div>
+
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="radio-2" type="radio" name="color" value="2" class="colors-button milk">
+                                                <label for="radio-2" class="milk">Бежевый</label>
+                                            </div>
+
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="radio-3" type="radio" name="color" value="3" class="colors-button gray">
+                                                <label for="radio-3" class="gray">Серый</label>
+                                            </div>
+
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="radio-4" type="radio" name="color" value="4" class="colors-button gray">
+                                                <label for="radio-4" class="gray">Серый</label>
+                                            </div>
+
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="radio-5" type="radio" name="color" value="5" class="colors-button gray">
+                                                <label for="radio-5" class="gray">Серый</label>
+                                            </div>
+
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="radio-6" type="radio" name="color" value="6" class="colors-button gray">
+                                                <label for="radio-6" class="gray">Серый</label>
+                                            </div>
+
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="radio-7" type="radio" name="color" value="7" class="colors-button gray">
+                                                <label for="radio-7" class="gray">Серый</label>
+                                            </div>
+
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="radio-8" type="radio" name="color" value="8" class="colors-button gray">
+                                                <label for="radio-8" class="gray">Серый</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="size">
+                                        <p class="size-description">Размер:</p>
+                                        <div class="radio-buttons">
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="size-radio-1" type="radio" name="size" value="S" class="size">
+                                                <label for="size-radio-1" class="size">S</label>
+                                            </div>
+
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="size-radio-2" type="radio" name="size" value="M" checked class="size">
+                                                <label for="size-radio-2" class="size">M</label>
+                                            </div>
+
+                                            <div class="form_radio_btn merch-options">
+                                                <input id="size-radio-3" type="radio" name="size" value="L" class="size">
+                                                <label for="size-radio-3" class="size">L</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="content-title">
+                                            Детали:
+                                        </div>
+                                        <div class="content-description">
+                                            Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
+                                        </div>
+
+                                        <div class="content-title">
+                                            Как выбрать размер:
+                                        </div>
+                                        <div class="content-description">
+                                            Написать дяде Рику для уточнения.
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="/src/assets/images/close.png" alt="Кнопка закрыть" class="merch-close">
+                            </div>
+
+                        </div>
+                        <!--Модальное окно-->
+
+
+
+
+
                     </div>
 
-                    <div class="content">
-                        <div class="content-title">
-                            Детали:
-                        </div>
-                        <div class="content-description">
-                            Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
-                        </div>
-
-                        <div class="content-title">
-                            Как выбрать размер:
-                        </div>
-                        <div class="content-description">
-                            Написать дяде Рику для уточнения.
-                        </div>
-                    </div>
                 </div>
-                <img src="/src/assets/images/close.png" alt="Кнопка закрыть" class="merch-close">
-            </div>
+            </section>
+            <footer>
+                <div class="left-widget">
+                    <span class="copyright">© Kolesa Group</span>
+                    <ul class="social-icons">
+                        <li><a href="#"><img src="src/assets/images/instagram.png" alt="Иконка instagram" width="18" height="18"></a></li>
+                        <li><a href="#"><img src="src/assets/images/youtube.png" alt="Иконка youtube" width="18" height="13"></a></li>
+                        <li><a href="#"><img src="src/assets/images/vk.png" alt="Иконка VK" width="18" height="11"></a></li>
+                    </ul>
+                </div>
 
+                <div class="right-widget">
+                    <span class="footer-text">
+                        <p>Есть идеи что улучшить?</p>
+                        <p> Не знаешь, с кем решить проблему?</p>
+                    </span>
+
+                    <button class="button footer-button" type="submit" >
+                        Написать
+                    </button>
+                </div>
+
+            </footer>
         </div>
-        <!--Модальное окно-->
-
-
-
-
-
     </div>
-
     <script>
         // Получить модальный
         var modal = document.getElementById("myModal");
@@ -224,7 +439,6 @@
             }
         }
     </script>
-
 </body>
 
 </html>

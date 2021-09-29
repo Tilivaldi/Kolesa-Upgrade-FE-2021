@@ -1,12 +1,3 @@
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -20,24 +11,311 @@ body {
     }
 }
 
-.card-list {
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.main {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+/**
+Header
+**/
+.header {
+    width: 100%;
+    padding: 32px;
     display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    flex-grow: 1;
+}
+
+.header-search {
+    flex-grow: 5;
+}
+
+.user-basket {
+    flex-grow: 0;
+}
+
+.user-basket a {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.user-photo {
+    border-radius: 22px;
+}
+
+.user-name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #2a81dd;
+}
+
+.page {
+    display: flex;
+    padding: 0 32px;
+    min-height: 78vh;
+}
+
+.sidebar-menu {
+    flex-grow: 1;
+    flex-basis: 338px;
+}
+
+.menu ul {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1c1819;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.menu ul li:hover {
+    font-weight: 600;
+}
+
+.menu ul li:hover::before {
+    content: '';
+    background: url(/src/assets/images/menu-border.png);
+    position: absolute;
+    margin: -5px 0 0 -8px;
+    border-radius: 16px;
+    width: 4px;
+    height: 36px;
+}
+
+.menu-active {
+    font-weight: 600;
+}
+
+.menu-active::before {
+    content: '';
+    background: url(/src/assets/images/menu-border.png);
+    position: absolute;
+    margin: -5px 0 0 -8px;
+    border-radius: 16px;
+    width: 4px;
+    height: 36px;
+}
+
+.workspace {
+    flex-grow: 0;
+    flex-basis: 1038px;
+    max-width: 1038px;
+}
+
+.banner img {
+    width: 1038px;
+    height: 336px;
+}
+
+.banner:hover {
+    box-shadow: 0 2px 10px rgba(28, 24, 25, 0.1);
+    border-radius: 8px;
+}
+
+.button {
+    background-color: #2a81dd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 2px 10px rgba(28, 24, 25, 0.1);
+}
+
+.info-button {
+    height: 76px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: #1c1819;
+}
+
+.information-buttons {
+    display: flex;
+    gap: 24px;
+    margin: 24px 0 16px 0;
+}
+
+.merch-plus {
+    background: #eff8eb;
+    border-radius: 16px;
+}
+
+.merch-plus::before {
+    content: '';
+    background: url(/src/assets/images/plus.png);
+    position: relative;
+    margin: 0 0 0 0;
+    left: 0;
+    top: 8px;
+    width: 48px;
+    height: 56px;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-out;
+}
+
+.merch-plus:hover::before {
+    transform:
+        rotate(
+            360deg
+        );
+    transition: all 0.5s ease-out;
+}
+
+.merch-question {
+    background: #fffae7;
+    border-radius: 16px;
+}
+
+.merch-question::before {
+    content: '';
+    background: url(/src/assets/images/question.png);
+    position: relative;
+    margin: 0 0 0 0;
+    left: 0;
+    top: 8px;
+    width: 48px;
+    height: 56px;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-out;
+}
+
+.merch-question:hover::before {
+    transform:
+        rotate(
+            360deg
+        );
+    transition: all 0.5s ease-out;
+}
+
+.merch-gift {
+    background: #e9f2fb;
+    border-radius: 16px;
+}
+
+.merch-gift::before {
+    content: '';
+    background: url(/src/assets/images/gift.png);
+    position: relative;
+    margin: 0 0 0 0;
+    left: 0;
+    top: 8px;
+    width: 48px;
+    height: 56px;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-out;
+}
+
+.merch-gift:hover::before {
+    transform:
+        rotate(
+            360deg
+        );
+    transition: all 0.5s ease-out;
+}
+
+/**
+Footer
+**/
+footer {
+    min-height: 98px;
+    background: #1c1819;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin: 32px 0 20px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin: 11px 0 0 0;
+}
+
+.right-widget {
+    display: flex;
+    flex-basis: 416px;
+}
+
+.footer-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0 16px 0 0;
+}
+
+.footer-button {
+    background: #fff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    height: 36px;
+    text-align: center;
+    color: #2a81dd;
+    max-width: 150px;
+    min-width: 150px;
 }
 
 /****
 Оформление карточки товар
 *****/
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .card {
     width: 330px;
-    height: 455px;
+    height: 518px;
     overflow: hidden;
-    margin: 0 20px;
 }
 
 .card:hover {
     box-shadow: 0 2px 10px rgba(28, 24, 25, 0.1);
     border-radius: 8px;
-    height: auto;
+}
+
+.merch-button {
+    opacity: 0;
+}
+
+.card:hover .merch-button {
+    opacity: 1;
 }
 
 .merch-image {
@@ -94,19 +372,6 @@ body {
     line-height: 24px;
     color: #888b94;
     margin-bottom: 16px;
-}
-
-.merch-button {
-    background-color: #2a81dd;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 44px;
-    border: 0;
-    border-radius: 8px;
-    cursor: pointer;
 }
 
 /*****
@@ -270,12 +535,20 @@ Radio button ***/
     display: none;
 }
 
-.form_radio_btn label {
+.merch-options label {
     cursor: pointer;
     padding: 0 10px 0 35px;
     line-height: 34px;
     border-radius: 8px;
     user-select: none;
+}
+
+input[type='radio']:not(:checked) + label {
+    border: 1px solid rgba(28, 24, 25, 0.1);
+}
+
+label.merch-type-options {
+    padding: 0 6px;
 }
 
 /* Disabled */
@@ -286,14 +559,6 @@ Radio button ***/
 
 .merch-options input[type='radio']:checked + label {
     background: #d6ecfb;
-}
-
-.merch-options input[type='radio']:not(:checked) + label {
-    border: none;
-}
-
-.merch-options input[type='radio']:checked + label,
-.merch-options input[type='radio']:not(:checked) + label {
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -301,6 +566,16 @@ Radio button ***/
     left: 0;
     top: 0;
     border: 1px solid transparent;
+}
+
+.merch-options input[type='radio']:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    content: '';
+    left: 0;
+    top: 0;
+    border: 1px solid rgba(28, 24, 25, 0.1);
 }
 
 .merch-options input[type='radio']:checked + label::after,

@@ -13,119 +13,300 @@
 
 <body>
 
-     <!--Модальное окно-->
-     <div id="myModal" class="modal">
-
-        <!-- Модальное содержание -->
-        <div class="modal-content">
-
-
-            <div class="product-description">
-                <h4 class="inner-title">Футболка "Эволюционируй или сдохни"</h4>
-                <div class="amount-container">
-                    <div class="price-container">
-                        <h3 class="price-product">100 баллов</h3>
-                        <button class="merch-button buy" type="submit" id="myBtn">
-                            Попросить 50 баллов
-                        </button>
-                    </div>
-                    <div class="amount-user">
-                        <p class="amount-title">Твой баланс:</p>
-                        <span class="amount-check">50 баллов</span>
-                    </div>
-                </div>
-
-                <div class="colors">
-                    <p class="color-description">Цвета:</p>
-                    <div class="radio-buttons">
-                        <div class="form_radio_btn merch-options">
-                            <input id="radio-1" type="radio" name="color" value="1" class="colors-button blue" checked>
-                            <label for="radio-1" class="blue">Синий</label>
-                        </div>
-
-                        <div class="form_radio_btn merch-options">
-                            <input id="radio-2" type="radio" name="color" value="2" class="colors-button milk">
-                            <label for="radio-2" class="milk">Бежевый</label>
-                        </div>
-
-                        <div class="form_radio_btn merch-options">
-                            <input id="radio-3" type="radio" name="color" value="3" class="colors-button gray">
-                            <label for="radio-3" class="gray">Серый</label>
-                        </div>
-
-                        <div class="form_radio_btn merch-options">
-                            <input id="radio-4" type="radio" name="color" value="4" class="colors-button gray">
-                            <label for="radio-4" class="gray">Серый</label>
-                        </div>
-
-                        <div class="form_radio_btn merch-options">
-                            <input id="radio-5" type="radio" name="color" value="5" class="colors-button gray">
-                            <label for="radio-5" class="gray">Серый</label>
-                        </div>
-
-                        <div class="form_radio_btn merch-options">
-                            <input id="radio-6" type="radio" name="color" value="6" class="colors-button gray">
-                            <label for="radio-6" class="gray">Серый</label>
-                        </div>
-
-                        <div class="form_radio_btn merch-options">
-                            <input id="radio-7" type="radio" name="color" value="7" class="colors-button gray">
-                            <label for="radio-7" class="gray">Серый</label>
-                        </div>
-
-                        <div class="form_radio_btn merch-options">
-                            <input id="radio-8" type="radio" name="color" value="8" class="colors-button gray">
-                            <label for="radio-8" class="gray">Серый</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="size">
-                    <p class="size-description">Размер:</p>
-                    <div class="radio-buttons">
-                        <div class="form_radio_btn merch-options">
-                            <input id="size-radio-1" type="radio" name="size" value="S" class="size">
-                            <label for="size-radio-1" class="size">S</label>
-                        </div>
-
-                        <div class="form_radio_btn merch-options">
-                            <input id="size-radio-2" type="radio" name="size" value="M" checked class="size">
-                            <label for="size-radio-2" class="size">M</label>
-                        </div>
-
-                        <div class="form_radio_btn merch-options">
-                            <input id="size-radio-3" type="radio" name="size" value="L" class="size">
-                            <label for="size-radio-3" class="size">L</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content">
-                    <div class="content-title">
-                        Детали:
-                    </div>
-                    <div class="content-description">
-                        Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
-                    </div>
-
-                    <div class="content-title">
-                        Как выбрать размер:
-                    </div>
-                    <div class="content-description">
-                        Написать дяде Рику для уточнения.
-                    </div>
-                </div>
+    <div class="card-list">
+        <div class="card">
+            <div class="merch-image">
+                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                <span class="merch-badge">new</span>
             </div>
-            <img src="/src/assets/images/close.png" alt="Кнопка закрыть" class="merch-close">
+            <div class="merch-description">
+                <div class="merch-price">
+                    220 баллов
+                </div>
+                <h3 class="merch-title">
+                    Футболка "Эволюционируй или сдохни"
+                </h3>
+                <div class="merch-hint">
+                    Размеры S/M/L
+                </div>
+                <button class="button merch-button" type="submit">
+                    Заказать
+                </button>
+            </div>
         </div>
 
+        <div class="card">
+            <div class="merch-image">
+                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                <span class="merch-badge">new</span>
+            </div>
+            <div class="merch-description">
+                <div class="merch-price">
+                    220 баллов
+                </div>
+                <h3 class="merch-title">
+                    Футболка "Эволюционируй или сдохни"
+                </h3>
+                <div class="merch-hint">
+                    Размеры S/M/L
+                </div>
+                <button class="button merch-button" type="submit" id="myBtn">
+                    Заказать (модальное окнопше)
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="merch-image">
+                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                <span class="merch-badge">new</span>
+            </div>
+            <div class="merch-description">
+                <div class="merch-price">
+                    220 баллов
+                </div>
+                <h3 class="merch-title">
+                    Футболка "Эволюционируй или сдохни"
+                </h3>
+                <div class="merch-hint">
+                    Размеры S/M/L
+                </div>
+                <button class="button merch-button" type="submit">
+                    Заказать (модальное окнопше)
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="merch-image">
+                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                <span class="merch-badge">new</span>
+            </div>
+            <div class="merch-description">
+                <div class="merch-price">
+                    220 баллов
+                </div>
+                <h3 class="merch-title">
+                    Футболка "Эволюционируй или сдохни"
+                </h3>
+                <div class="merch-hint">
+                    Размеры S/M/L
+                </div>
+                <button class="button merch-button" type="submit">
+                    Заказать (модальное окнопше)
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="merch-image">
+                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                <span class="merch-badge">new</span>
+            </div>
+            <div class="merch-description">
+                <div class="merch-price">
+                    220 баллов
+                </div>
+                <h3 class="merch-title">
+                    Футболка "Эволюционируй или сдохни"
+                </h3>
+                <div class="merch-hint">
+                    Размеры S/M/L
+                </div>
+                <button class="button merch-button" type="submit">
+                    Заказать (модальное окнопше)
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="merch-image">
+                <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Футболка Эволюционируй">
+                <span class="merch-badge">new</span>
+            </div>
+            <div class="merch-description">
+                <div class="merch-price">
+                    220 баллов
+                </div>
+                <h3 class="merch-title">
+                    Футболка "Эволюционируй или сдохни"
+                </h3>
+                <div class="merch-hint">
+                    Размеры S/M/L
+                </div>
+                <button class="button merch-button" type="submit">
+                    Заказать (модальное окнопше)
+                </button>
+            </div>
+        </div>
+
+
+
+        <!--Модальное окно-->
+        <div id="myModal" class="modal">
+
+            <!-- Модальное содержание -->
+            <div class="modal-content">
+                <div class="image-container">
+                    <div class="active-image">
+                        <img src="./src/assets/images/product-image.png" width="330" height="330" alt="Вид спереди">
+                    </div>
+
+                    <div class="gallery-images">
+                        <img src="./src/assets/images/image-boy.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image">
+
+                        <img src="./src/assets/images/product-image.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image active">
+
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+                        <img src="./src/assets/images/image-girl.png" width="50" height="50" alt="Вид спереди"
+                            class="gallery-thumb-image ">
+
+                    </div>
+                </div>
+
+                <div class="product-description">
+                    <h4 class="inner-title">Футболка "Эволюционируй или сдохни"</h4>
+                    <div class="amount-container">
+                        <div class="price-container">
+                            <h3 class="price-product">100 баллов</h3>
+                            <button class="merch-button request" type="submit" id="myBtn">
+                                Попросить 50 баллов
+                            </button>
+                        </div>
+                        <div class="amount-user">
+                            <p class="amount-title">Твой баланс:</p>
+                            <span class="amount-check">50 баллов</span>
+                        </div>
+                    </div>
+
+                    <div class="colors">
+                        <p class="color-description">Цвета:</p>
+                        <div class="radio-buttons">
+                            <div class="form_radio_btn merch-options">
+                                <input id="radio-1" type="radio" name="color" value="1" class="colors-button blue" checked>
+                                <label for="radio-1" class="blue">Синий</label>
+                            </div>
+
+                            <div class="form_radio_btn merch-options">
+                                <input id="radio-2" type="radio" name="color" value="2" class="colors-button milk">
+                                <label for="radio-2" class="milk">Бежевый</label>
+                            </div>
+
+                            <div class="form_radio_btn merch-options">
+                                <input id="radio-3" type="radio" name="color" value="3" class="colors-button gray">
+                                <label for="radio-3" class="gray">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn merch-options">
+                                <input id="radio-4" type="radio" name="color" value="4" class="colors-button gray">
+                                <label for="radio-4" class="gray">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn merch-options">
+                                <input id="radio-5" type="radio" name="color" value="5" class="colors-button gray">
+                                <label for="radio-5" class="gray">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn merch-options">
+                                <input id="radio-6" type="radio" name="color" value="6" class="colors-button gray">
+                                <label for="radio-6" class="gray">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn merch-options">
+                                <input id="radio-7" type="radio" name="color" value="7" class="colors-button gray">
+                                <label for="radio-7" class="gray">Серый</label>
+                            </div>
+
+                            <div class="form_radio_btn merch-options">
+                                <input id="radio-8" type="radio" name="color" value="8" class="colors-button gray">
+                                <label for="radio-8" class="gray">Серый</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="size">
+                        <p class="size-description">Размер:</p>
+                        <div class="radio-buttons">
+                            <div class="form_radio_btn merch-options">
+                                <input id="size-radio-1" type="radio" name="size" value="S" class="size">
+                                <label for="size-radio-1" class="size">S</label>
+                            </div>
+
+                            <div class="form_radio_btn merch-options">
+                                <input id="size-radio-2" type="radio" name="size" value="M" checked class="size">
+                                <label for="size-radio-2" class="size">M</label>
+                            </div>
+
+                            <div class="form_radio_btn merch-options">
+                                <input id="size-radio-3" type="radio" name="size" value="L" class="size">
+                                <label for="size-radio-3" class="size">L</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="content-title">
+                            Детали:
+                        </div>
+                        <div class="content-description">
+                            Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
+                        </div>
+
+                        <div class="content-title">
+                            Как выбрать размер:
+                        </div>
+                        <div class="content-description">
+                            Написать дяде Рику для уточнения.
+                        </div>
+                    </div>
+                </div>
+                <img src="/src/assets/images/close.png" alt="Кнопка закрыть" class="merch-close">
+            </div>
+
+        </div>
+        <!--Модальное окно-->
+
+
+
+
+
     </div>
-    <!--Модальное окно-->
 
-
-
-
-
+    <script>
+        // Получить модальный
+        var modal = document.getElementById("myModal");
+        // Получить кнопку, которая открывает модальный
+        var btn = document.getElementById("myBtn");
+        // Получить элемент <span>, который закрывает модальный
+        var span = document.getElementsByClassName("merch-close")[0];
+        // Когда пользователь нажимает на кнопку, откройте модальный
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        // Когда пользователь нажимает на <span> (x), закройте модальное окно
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        // Когда пользователь щелкает в любом месте за пределами модального, закройте его
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 
