@@ -6,8 +6,8 @@ body {
     @font-face {
         font-family: 'Open Sans';
         src:
-            local('HelveticaNeue-Bold'),
-            url('../fonts/OpenSans-Regular.ttf');
+            local('Open Sans'),
+            url('../fonts/opensans-regular-webfont.woff2');
     }
 }
 
@@ -461,6 +461,8 @@ footer {
 }
 
 .merch-close {
+    background: transparent url(/src/assets/images/close.png) no-repeat;
+    border: 0;
     width: 18px;
     cursor: pointer;
     height: 18px;
