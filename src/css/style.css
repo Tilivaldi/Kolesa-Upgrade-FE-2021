@@ -39,6 +39,49 @@ Header
     flex-grow: 5;
 }
 
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.search-term {
+    width: 300px;
+    border: none;
+    padding: 8px;
+    height: 44px;
+    border-radius: 0 8px 8px 0;
+    background: #f2f2f3;
+    color: #888b94;
+}
+
+.search-term:focus {
+    color: #1c1819e1;
+}
+
+.search-term:active {
+    color: #1c1819;
+}
+
+.search-button {
+    width: 44px;
+    height: 44px;
+    border: none;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.search-button:hover img {
+    transform:
+        rotate(
+            90deg
+        );
+    transition: transform 0.3s ease-out;
+}
+
 .user-basket {
     flex-grow: 0;
 }
