@@ -1,0 +1,13 @@
+@import '../vars.scss';
+
+footer {
+    width: 1440px;
+    margin: 0 auto;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    min-height: 98px;
+    background: $dark;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+}

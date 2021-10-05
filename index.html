@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <link rel="stylesheet" href="./src/css/normalize.css">
     <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <!--<link rel="stylesheet" href="./src/css/style.css">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
                         <button type="submit" class="search-button">
                             <img src="/src/assets/images/search-icon.png" alt="Иконка поиска">
                          </button>
-                        <input type="text" class="search-term" placeholder="Поиск">
+                        <input type="text" class="search search__search-term" placeholder="Поиск">
 
                      </div>
                 </div>
@@ -52,9 +52,9 @@
             </header>
 
             <section class="page">
-                <aside class="sidebar-menu">
+                <aside class="sidebar">
                     <nav>
-                        <ul class="menu">
+                        <ul class="sidebar sidebar__menu">
                             <a href="#">
                                 <li>Оргсхема</li>
                             </a>
@@ -62,7 +62,7 @@
                                 <li>Kolesa Team</li>
                             </a>
                             <a href="#">
-                                <li class="menu-active">Kolesa Shop</li>
+                                <li class="sidebar sidebar__menu-active">Kolesa Shop</li>
                             </a>
                             <a href="#">
                                 <li>Картина компании</li>
@@ -92,13 +92,13 @@
                         </a>
                     </div>
                     <div class="information-buttons">
-                        <button class="button info-button merch-plus" type="submit">
+                        <button class="button button__info-button button__merch-plus" type="submit">
                             Получить баллы
                         </button>
-                        <button class="button info-button merch-question" type="submit">
+                        <button class="button button__info-button button__merch-question" type="submit">
                             Как получить баллы
                         </button>
-                        <button class="button info-button merch-gift" type="submit">
+                        <button class="button button__info-button button__merch-gift" type="submit">
                             Подарить баллы
                         </button>
                     </div>
@@ -124,134 +124,133 @@
                             </div>
                         </div>
                     </div>
-<div class="card-list">
+<div class="card-list card-list--margin">
     <div class="card">
-        <div class="merch-image">
+        <div class="merch merch__image">
             <img src="./src/assets/images/product-image.png" width="330" height="330"
                 alt="Футболка Эволюционируй">
-            <span class="merch-badge">new</span>
+            <span class="merch merch__badge">new</span>
         </div>
-        <div class="merch-description">
-            <div class="merch-price">
+        <div class="merch merch__description">
+            <div class="merch merch__price">
                 220 баллов
             </div>
-            <h3 class="merch-title">
+            <h3 class="merch merch__title">
                 Футболка "Эволюционируй или сдохни"
             </h3>
-            <div class="merch-hint">
+            <div class="merch merch__hint">
                 Размеры S/M/L
             </div>
-            <button class="button merch-button" type="submit">
-                Заказать
+            <button class="button merch merch__button" type="submit" id="">
+             Заказать
             </button>
         </div>
     </div>
 
     <div class="card">
-        <div class="merch-image">
+        <div class="merch merch__image">
             <img src="./src/assets/images/product-image.png" width="330" height="330"
                 alt="Футболка Эволюционируй">
-            <span class="merch-badge">new</span>
+            <span class="merch merch__badge">new</span>
         </div>
-        <div class="merch-description">
-            <div class="merch-price">
+        <div class="merch merch__description">
+            <div class="merch merch__price">
                 220 баллов
             </div>
-            <h3 class="merch-title">
+            <h3 class="merch merch__title">
                 Футболка "Эволюционируй или сдохни"
             </h3>
-            <div class="merch-hint">
+            <div class="merch merch__hint">
                 Размеры S/M/L
             </div>
-            <button class="button merch-button" type="submit" id="myBtn">
+            <button class="button merch merch__button" type="submit" id="myBtn">
                 Заказать рабочая кнопка
             </button>
         </div>
     </div>
 
     <div class="card">
-        <div class="merch-image">
+        <div class="merch merch__image">
             <img src="./src/assets/images/product-image.png" width="330" height="330"
                 alt="Футболка Эволюционируй">
-            <span class="merch-badge">new</span>
+            <span class="merch merch__badge">new</span>
         </div>
-        <div class="merch-description">
-            <div class="merch-price">
+        <div class="merch merch__description">
+            <div class="merch merch__price">
                 220 баллов
             </div>
-            <h3 class="merch-title">
+            <h3 class="merch merch__title">
                 Футболка "Эволюционируй или сдохни"
             </h3>
-            <div class="merch-hint">
+            <div class="merch merch__hint">
                 Размеры S/M/L
             </div>
-            <button class="button merch-button" type="submit">
+            <button class="button merch merch__button" type="submit" id="">
                 Заказать
             </button>
         </div>
     </div>
 
     <div class="card">
-        <div class="merch-image">
+        <div class="merch merch__image">
             <img src="./src/assets/images/product-image.png" width="330" height="330"
                 alt="Футболка Эволюционируй">
-            <span class="merch-badge">new</span>
+            <span class="merch merch__badge">new</span>
         </div>
-        <div class="merch-description">
-            <div class="merch-price">
+        <div class="merch merch__description">
+            <div class="merch merch__price">
                 220 баллов
             </div>
-            <h3 class="merch-title">
+            <h3 class="merch merch__title">
                 Футболка "Эволюционируй или сдохни"
             </h3>
-            <div class="merch-hint">
+            <div class="merch merch__hint">
                 Размеры S/M/L
             </div>
-            <button class="button merch-button" type="submit">
+            <button class="button merch merch__button" type="submit" id="">
                 Заказать
             </button>
         </div>
     </div>
 
     <div class="card">
-        <div class="merch-image">
+        <div class="merch merch__image">
             <img src="./src/assets/images/product-image.png" width="330" height="330"
                 alt="Футболка Эволюционируй">
-            <span class="merch-badge">new</span>
+            <span class="merch merch__badge">new</span>
         </div>
-        <div class="merch-description">
-            <div class="merch-price">
+        <div class="merch merch__description">
+            <div class="merch merch__price">
                 220 баллов
             </div>
-            <h3 class="merch-title">
+            <h3 class="merch merch__title">
                 Футболка "Эволюционируй или сдохни"
             </h3>
-            <div class="merch-hint">
+            <div class="merch merch__hint">
                 Размеры S/M/L
             </div>
-            <button class="button merch-button" type="submit">
+            <button class="button merch merch__button" type="submit" id="">
                 Заказать
             </button>
         </div>
     </div>
 
     <div class="card">
-        <div class="merch-image">
+        <div class="merch merch__image">
             <img src="./src/assets/images/product-image.png" width="330" height="330"
                 alt="Футболка Эволюционируй">
-            <span class="merch-badge">new</span>
         </div>
-        <div class="merch-description">
-            <div class="merch-price">
+        <div class="merch merch__description">
+            <div class="merch merch__price">
                 220 баллов
             </div>
-            <h3 class="merch-title">
+            <h3 class="merch merch__title">
                 Футболка "Эволюционируй или сдохни"
             </h3>
-            <div class="merch-hint">
+            <div class="merch merch__hint">
                 Размеры S/M/L
             </div>
-            <button class="button merch-button" type="submit">
+            <button class="button merch merch__button" type="submit" id="">
                 Заказать
             </button>
         </div>
@@ -425,8 +424,8 @@
         </div>
         <footer>
             <div class="left-widget">
-                <span class="copyright">© Kolesa Group</span>
-                <ul class="social-icons">
+                <span class="left-widget__copyright">© Kolesa Group</span>
+                <ul class="left-widget__social-icons">
                     <li><a href="#"><img src="src/assets/images/instagram.png" alt="Иконка instagram" width="18"
                                 height="18"></a></li>
                     <li><a href="#"><img src="src/assets/images/youtube.png" alt="Иконка youtube" width="18"
@@ -437,12 +436,12 @@
             </div>
 
             <div class="right-widget">
-                <span class="footer-text">
+                <span class="right-widget__footer-text">
                     <p>Есть идеи что улучшить?</p>
                     <p> Не знаешь, с кем решить проблему?</p>
                 </span>
 
-                <button class="button footer-button" type="submit">
+                <button class="button button__footer" type="submit">
                     Написать
                 </button>
             </div>
@@ -471,6 +470,7 @@
             }
         }
     </script>
+    <script type="module" src="/src/js/main.js"></script>
 </body>
 
 </html>

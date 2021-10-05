@@ -1,0 +1,37 @@
+@import '../vars.scss';
+
+.sidebar {
+    flex-grow: 1;
+    flex-basis: 338px;
+
+    &__menu {
+        font-size: 16px;
+        line-height: 24px;
+        color: $dark;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    &__menu li:hover::before {
+        content: '';
+        border-right: 4px solid $blue;
+        position: absolute;
+        margin: -4px 0 0 -8px;
+        border-radius: 8px;
+        height: 32px;
+    }
+
+    &__menu-active {
+        font-weight: 600;
+    }
+
+    &__menu-active::before {
+        content: '';
+        border-right: 4px solid $blue;
+        position: absolute;
+        margin: -4px 0 0 -8px;
+        border-radius: 8px;
+        height: 32px;
+    }
+}
