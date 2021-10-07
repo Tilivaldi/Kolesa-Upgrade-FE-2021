@@ -18,18 +18,18 @@ Radio button ***/
     margin: 24px 0 8px 0;
 }
 
-.form_radio_btn {
+.form-radio-btn {
     display: inline-block;
     margin-right: 10px;
 }
 
-.form_radio_btn:hover {
+.form-radio-btn:hover {
     background: #d6ecfb;
 
     @include border-radius;
 }
 
-.form_radio_btn input[type=radio] {
+.form-radio-btn input[type=radio] {
     display: none;
 }
 
@@ -52,7 +52,7 @@ label.merch-type-options {
 }
 
 /* Disabled */
-.form_radio_btn input[type=radio]:disabled + label {
+.form-radio-btn input[type=radio]:disabled + label {
     background: #efefef;
     color: #666;
 }
