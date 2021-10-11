@@ -209,63 +209,50 @@ const makeProductCard = (img, title, price, isNew, hint, id) => `<div class="car
 
 const innerCardList = document.querySelector('.js__card-list');
 
-function makeClothesFunction() {
-    clothes.forEach((card) => {
+function makeCatalog(array) {
+    let tempArray = [];
+
+    array.forEach((card) => {
         const {
             img, title, price, isNew, hint, id,
         } = card;
         const cardHtml = makeProductCard(img, title, price, isNew, hint, id);
 
-        if (card.isNew === true) {
-            innerCardList.insertAdjacentHTML('afterbegin', cardHtml);
-        } else {
-            innerCardList.innerHTML += cardHtml;
-        }
+        tempArray += cardHtml;
     });
+
+    return tempArray;
+    /* innerCardList.innerHTML += printArray; */
 }
 
-function makeAccessoriesFunction() {
-    accessories.forEach((card) => {
-        const {
-            img, title, price, isNew, hint, id,
-        } = card;
-        const cardHtml = makeProductCard(img, title, price, isNew, hint, id);
-
-        if (card.isNew === true) {
-            innerCardList.insertAdjacentHTML('afterbegin', cardHtml);
-        } else {
-            innerCardList.innerHTML += cardHtml;
-        }
-    });
+function printArray(array) {
+    innerCardList.innerHTML += makeCatalog(array.sort((a, b) => b.isNew - a.isNew));
 }
 
 const inputCardType = document.querySelectorAll('.js__category-input');
 
-function createCardIf() {
+function createCardInRadioButtons() {
     inputCardType.forEach((input) => {
         input.addEventListener('click', (event) => {
             const inputKey = event.target.dataset.key;
 
+            innerCardList.innerHTML = '';
+
             if (inputKey === 'all') {
-                innerCardList.innerHTML = '';
-                makeClothesFunction();
-                makeAccessoriesFunction();
+                printArray(clothes.concat(accessories));
             } else if (inputKey === 'clothes') {
-                innerCardList.innerHTML = '';
-                makeClothesFunction();
+                printArray(clothes);
             } else if (inputKey === 'accessories') {
-                innerCardList.innerHTML = '';
-                makeAccessoriesFunction();
+                printArray(accessories);
             }
         });
     });
 }
 
-if (createCardIf() === undefined) {
-    makeClothesFunction();
-    makeAccessoriesFunction();
+if (createCardInRadioButtons() === undefined) {
+    printArray(clothes.concat(accessories));
 } else {
-    createCardIf();
+    createCardInRadioButtons();
 }
 
 const makeModalWindow = (img, title, price, details, helpTxt, id) => `
@@ -379,35 +366,26 @@ const makeModalWindow = (img, title, price, details, helpTxt, id) => `
 </div>
 <!--Модальное окно-->`;
 
-function makeWindowsClothesFunction() {
-    clothes.forEach((card) => {
+function makeWindowsFunction(catalogArray) {
+    catalogArray.forEach((card) => {
         const {
             img, title, price, details, helpTxt, id,
         } = card;
+
         const cardHtml = makeModalWindow(img, title, price, details, helpTxt, id);
 
         innerCardList.innerHTML += cardHtml;
     });
 }
 
-function makeWindowsAccessoriesFunction() {
-    accessories.forEach((card) => {
-        const {
-            img, title, price, details, helpTxt, id,
-        } = card;
-        const cardHtml = makeModalWindow(img, title, price, details, helpTxt, id);
-
-        innerCardList.innerHTML += cardHtml;
-    });
-}
-makeWindowsAccessoriesFunction();
-makeWindowsClothesFunction();
+makeWindowsFunction(clothes);
+makeWindowsFunction(accessories);
 
 const closeButton = document.querySelectorAll('.merch-close');
 
 const buttonModalOpen = document.querySelectorAll('.js__open-modal-button');
 
-function openModal() {
+function addOpenModalHandlers() {
     buttonModalOpen.forEach((button) => {
         button.addEventListener('click', (event) => {
             const inputKey = event.target.dataset.key;
@@ -430,5 +408,5 @@ function closeModal() {
     });
 }
 
-openModal();
+addOpenModalHandlers();
 closeModal();
