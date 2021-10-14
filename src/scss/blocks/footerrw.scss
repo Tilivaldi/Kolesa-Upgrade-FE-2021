@@ -1,0 +1,13 @@
+@import '../vars.scss';
+
+.right-widget {
+    display: flex;
+    flex-basis: 416px;
+
+    &__footer-text {
+        font-size: 14px;
+        line-height: 24px;
+        color: $white;
+        margin: 0 16px 0 0;
+    }
+}
