@@ -1,0 +1,93 @@
+@import '../vars.scss';
+
+/****
+Оформление карточки товар
+*****/
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &--margin {
+        margin: 16px 0;
+    }
+}
+
+.card {
+    width: 330px;
+    height: 518px;
+    overflow: hidden;
+
+    &:hover {
+        @include box-shadow;
+        @include border-radius;
+    }
+}
+
+.merch {
+    &__image {
+        position: relative;
+    }
+
+    &__badge {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        font-size: 13px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $white;
+        background-color: #64bd38;
+        padding: 0 4px;
+        border-radius: 4px;
+    }
+
+    &__image img {
+        display: block;
+        object-fit: cover;
+    }
+
+    &__description {
+        padding: 16px;
+    }
+
+    &__price {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        color: $blue;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        color: $dark;
+        margin-bottom: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-right: 8px;
+    }
+
+    &__hint {
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark-gray;
+        margin-bottom: 16px;
+    }
+
+    .card:hover &__price {
+        color: $red;
+    }
+
+    &__button {
+        opacity: 0;
+    }
+
+    .card:hover &__button {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+    }
+}
