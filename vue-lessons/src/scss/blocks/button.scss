@@ -92,6 +92,29 @@
         transition: all 0.5s ease-out
     }
 
+    &__filter {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        content: '';
+        left: 0;
+        top: 0;
+        border: 1px solid rgba(28, 24, 25, 0.1);
+        background: transparent;
+        color: #000;
+    }
+
+    &__filter--active {
+        background: #d6ecfb;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        content: '';
+        left: 0;
+        top: 0;
+        border: 1px solid transparent;
+    }
+
     &--footer {
         background: $white;
         font-size: 14px;
