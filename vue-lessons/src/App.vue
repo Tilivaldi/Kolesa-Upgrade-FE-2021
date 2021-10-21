@@ -90,27 +90,26 @@
                     </div>
 
                     <div class="merch-type">
-                        <div class="radio-buttons">
+                        <div class="radio-buttons" >
                             <div
+
                                 class="form-radio-btn merch-options"
                                 v-for="(item, id) in filter"
                                 :key="id"
                                 v-bind:class="classObject"
                             >
-                                <button
-                                    class="button button__filter"
-                                    type="submit"
-                                    value=""
-                                >
-                                    {{ item.name }}
-                                </button>
+                                <input type="radio" class="merch-type-options"
+                                    v-bind:value="item.name" v-model="selectedFilter" :data-key="item.dataKey"/>
+                                <label :for="'merch-type'+(item.id)" class="merch-type-options js__category-input"
+                                >{{item.name}}</label>
                             </div>
+                            <span v-if="selectedFilter!==null">Выбрано: {{selectedFilter.name}} - {{item.id}}</span>
                         </div>
                     </div>
                     <div class="card-list card-list--margin">
                         <div
                             class="card"
-                            v-for="(item, id) in clothes"
+                            v-for="(item, id) in getCurrentCategory"
                             :key="id"
                         >
                             <div class="merch merch__image">
@@ -520,14 +519,17 @@ export default {
                 {
                     id: 0,
                     name: 'Все товары',
+                    dataKey: 'All',
                 },
                 {
                     id: 1,
                     name: 'Одежда',
+                    dataKey: 'clothes',
                 },
                 {
                     id: 2,
                     name: 'Аксессуары',
+                    dataKey: 'accessories',
                 },
             ],
 
@@ -729,10 +731,14 @@ export default {
         };
     },
     computed: {
-        computedTitle() {
-            return this.clothes.title;
+        getCurrentCategory() {
+            let allCard = [];
+            if (this.currentTab === 'clothes') return this.clothes;
+            if (this.currentTab === 'accessories') return this.accessories;
+            allCard = this.clothes.concat(this.accessories);
+            allCard.sort((a, b) => b.isNew - a.isNew);
+            return allCard;
         },
-
     },
     methods: {
         openModal() {
@@ -741,11 +747,6 @@ export default {
 
         closeModal() {
             this.isShowModal = false;
-        },
-
-        mergeArray() {
-            const allCards = this.clothes.pop(this.accessories);
-            return allCards;
         },
 
         classObject() {
