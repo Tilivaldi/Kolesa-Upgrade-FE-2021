@@ -193,7 +193,7 @@ export default {
             filter: [
                 {
                     id: 0,
-                    name: 'Все товары',
+                    name: 'Все товаы',
                     dataKey: 'All',
                 },
                 {
