@@ -1,0 +1,133 @@
+/* Модальное содержание/коробка */
+.modal-content {
+    background-color: $white;
+    padding: 56px;
+    border: none;
+    border-radius: 8px;
+    width: 1040px;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    gap: 20px;
+}
+
+.image-container {
+    flex-grow: 1;
+}
+
+.product-description {
+    flex-grow: 2;
+}
+
+.main-image {
+    margin-bottom: 16px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.gallery-thumb-image {
+    &--active {
+        border: 1px solid $blue;
+        border-radius: 8px;
+    }
+}
+
+.inner-title {
+    font-size: 20px;
+    line-height: 32px;
+    color: $dark;
+    margin-bottom: 8px;
+}
+
+.price-container {
+    flex-grow: 1;
+}
+
+.amount-user {
+    background: $user-gray;
+    border-radius: 16px;
+    width: 196px;
+    height: 68px;
+    padding: 8px 16px;
+    background-image: url(/src/assets/images/basket.png);
+    background-repeat: no-repeat;
+    background-position: right 16px bottom 50%;
+}
+
+.amount-container {
+    display: flex;
+}
+
+.amount-check {
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark;
+    margin: 4px 0 0 0;
+}
+
+.amount-title {
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark-gray;
+}
+
+.price-product {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: $dark;
+    margin-bottom: 8px;
+}
+
+.request {
+    font-size: 14px;
+    line-height: 24px;
+    background-color: $orange;
+    color: $dark;
+    width: 185px;
+    height: 36px;
+    cursor: pointer;
+
+    @include border-radius;
+}
+
+.buy {
+    background: $blue;
+    color: $white;
+    width: 134px;
+    height: 36px;
+    cursor: pointer;
+
+    @include border-radius;
+}
+
+.merch-close {
+    background: transparent url(/src/assets/images/close.png) no-repeat;
+    border: 0;
+    width: 18px;
+    cursor: pointer;
+    height: 18px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.content-title {
+    margin: 24px 0 4px 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark;
+}
+
+.content-description {
+    font-size: 14px;
+    line-height: 24px;
+}
